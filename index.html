@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora IMC</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="caixa_titulo">
+        <h1 class="titulo">Calculadora de índice de massa coporal (IMC)</h1>
+    </div>
+
+    <div class="caixa_principal">
+        <span class="caixa_tabela">
+            <table class="tabela">
+                <tr>
+                    <th>IMC</th>
+                    <th>Classificações</th>
+                </tr>
+
+                <tr>
+                    <td>
+                        < 18,5</td>
+                    <td>Abaixo do peso normal</td>
+                </tr>
+
+                <tr>
+                    <td>18,5 - 24,9</td>
+                    <td>Peso normal</td>
+                </tr>
+
+                <tr>
+                    <td>25 - 29,9</td>
+                    <td>Excesso de peso</td>
+                </tr>
+
+                <tr>
+                    <td>30 - 34,9</td>
+                    <td>Obesidade nível I</td>
+                </tr>
+
+                <tr>
+                    <td>35 - 39,9</td>
+                    <td>Obesidade nível II</td>
+                </tr>
+
+                <tr>
+                    <td>>= 40</td>
+                    <td>Obesidade nível III</td>
+                </tr>
+            </table>
+
+            <p class="fonte">
+                Fonte :
+                <a href="https://endocrinologiacuritiba.com.br/blog/
+                perguntas-frequentes/qual-o-meu-peso-ideal/attachment/attachment-tabela-imc/"
+                    target="_blank">endocrinologiacuritiba.com.br</a>
+            </p>
+        </span>
+
+        <span class="caixa_calculadora">
+            <div class="calculadora">
+                <div class="caixa_entradas_dados">
+                    <span>Peso:
+                        <label for="entrada_peso"></label>
+                        <input type="number" class="entrada_dados" id="entrada_peso" />
+                        kg.
+                    </span>
+
+                    <span>Altura:
+                        <label for="entrada_altura"></label>
+                        <input type="number" class="entrada_dados" id="entrada_altura" />
+                        metro(s).
+                    </span>
+                </div>
+
+                <div class="caixa_botao_resultado">
+                    <button id="botao_calcular" type="button">Calcular</button>
+                </div>
+
+                <div class="caixa_saida_dados">
+                    <p id="resultado">Digite os valores nos campos acima</p>
+                </div>
+            </div>
+
+            <div class="modo_noturno">
+                <input type="checkbox" class="checkbox" id="chk" />
+
+                <label class="label" for="chk">
+                    <div class="bola"></div>
+                </label>
+            </div>
+        </span>
+    </div>
+
+    <footer class="caixa_rodape">
+        <span class="caixa_prototipo_logo">
+            <span class="prototipo_logo">Logo</span>
+        </span>
+
+        <span class="creditos">Desenvolvido por Pedro Cavalcanti</span>
+
+        <span class="caixa_redes_sociais" id="icons">
+            <a href="https://github.com/opedro500" target="_blank" class="icones_rodape">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.instagram.com/opedro.pv/" target="_blank" class="icones_rodape">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="" target="_blank" class="icones_rodape">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </span>
+    </footer>
+
+    <script src="javascript.js"></script>
+    <script src="https://kit.fontawesome.com/e8f60f12a8.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
