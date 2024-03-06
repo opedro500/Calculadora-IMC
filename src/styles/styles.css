@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-light-50: #f7f7f7;
+
+    --color-dark-50: #797984;
+    --color-dark-900: #000;
+
+    ---color-purple-100: #e6e1f0;
+    --color-purple-300: #777188;
+    --color-purple-500: #403d47;
+    --color-purple-800: #16151C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-light-50);
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    gap: 25rem;
+    background-color: var(---color-purple-100);
+    padding: 4.25rem;
+    border-radius: 50px;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+    color: var(--color-purple-800);
+    background-color: var(--color-purple-300);
+    border-radius: 50px;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#title {
+    font-size: 2.25rem;
+    position: relative;
+}
+
+#title::after {
+    position: absolute;
+    content: '';
+    background-color: var(---color-purple-100);
+    width: 8rem;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    border-radius: 3px;
+}
+
+.input-box label{
+    font-size: 1.1rem;
+    color: var(--color-light-50);
+    font-weight: 500;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(---color-purple-100);
+    padding: 0.3rem;
+    border-radius: 3px;
+    margin-top: 3px;
+}
+
+.input-field span, .input-field i {
+    color: var(--color-purple-500);
+    font-size: 1.3rem;
+    padding: 0.6rem 1rem;
+}
+
+.input-field input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-size: 1.3rem;
+    color: var(--color-purple-500);
+    padding: 0, 0.5rem;
+}
+
+.input-field input::-webkit-outer-spin-button,  
+.input-field input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.input-field input:focus {
+    outline: none;
+}
+
+#button {
+    border: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    background-color: var(---color-purple-100);
+    color: var(--color-purple-800);
+    padding: 10px;
+    border-radius: 3px;
+}
+
+#button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#result {
+    border-top: 1px solid var(---color-purple-100);
+    padding: 0.75rem 0;
+}
+
+#bmi {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 3rem;
+}
+
+#bmi span:last-child {
+    font-size: 1.1rem;
+    color: var(--color-light-50);
+}
+
+.hidden {
+    display: none;
+}
