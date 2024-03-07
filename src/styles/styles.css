@@ -44,10 +44,10 @@ body.dark {
 #table-calculator {
     display: flex;
     align-items: center;
-    gap: 25rem;
-    background-color: var(--color-purple-100);
+    gap: 20rem;
     padding: 4.25rem;
     border-radius: 50px;
+    background-color: var(--color-purple-100);
 }
 
 #table {
@@ -57,22 +57,17 @@ body.dark {
     align-items: center;
 }
 
-#table-bmi {
-    border-collapse: collapse;
-}
-
 #table-bmi th,
 td {
-    border-collapse: collapse;
     padding: 10px;
     text-align: center;
     color: var(--color-purple-800);
 }
 
 #table-bmi th {
-    background-color: var(--color-purple-300);
     font-size: 1.1rem;
     font-weight: 500;
+    background-color: var(--color-purple-300);
 }
 
 #table-bmi tr:nth-child(odd) {
@@ -82,7 +77,7 @@ td {
 
 #ref-table {
     margin-top: 5px;
-    font-size: 0.8rem;
+    font-size: 12px;
     color: var(--color-purple-800);
 }
 
@@ -95,9 +90,9 @@ td {
     flex-direction: column;
     gap: 2rem;
     padding: 3rem;
-    color: var(--color-purple-800);
-    background-color: var(--color-purple-300);
     border-radius: 50px;
+    background-color: var(--color-purple-300);
+    color: var(--color-purple-800);
 }
 
 #form {
@@ -114,35 +109,35 @@ td {
 #title::after {
     position: absolute;
     content: '';
-    background-color: var(--color-purple-100);
     width: 8rem;
     height: 3px;
     bottom: 0;
     left: 0;
     border-radius: 3px;
+    background-color: var(--color-purple-100);
 }
 
 .input-box label {
     font-size: 1.1rem;
-    color: var(--color-light-50);
     font-weight: 500;
+    color: var(--color-light-50);
 }
 
 .input-field {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--color-purple-100);
     padding: 0.3rem;
     border-radius: 3px;
     margin-top: 3px;
+    background-color: var(--color-purple-100);
 }
 
 .input-field span,
 .input-field i {
-    color: var(--color-purple-500);
     font-size: 1.3rem;
     padding: 0.6rem 1rem;
+    color: var(--color-purple-500);
 }
 
 .input-field input {
@@ -150,8 +145,8 @@ td {
     border: none;
     width: 100%;
     font-size: 1.3rem;
-    color: var(--color-purple-500);
     padding: 0, 0.5rem;
+    color: var(--color-purple-500);
 }
 
 .input-field input::-webkit-outer-spin-button,
@@ -167,10 +162,10 @@ td {
     border: none;
     font-size: 1.25rem;
     font-weight: 600;
-    background-color: var(--color-purple-100);
-    color: var(--color-purple-800);
     padding: 10px;
     border-radius: 3px;
+    background-color: var(--color-purple-100);
+    color: var(--color-purple-800);
 }
 
 #button:hover {
@@ -179,8 +174,8 @@ td {
 }
 
 #result {
-    border-top: 1px solid var(--color-purple-100);
     padding: 0.75rem 0;
+    border-top: 1px solid var(--color-purple-100);
 }
 
 #bmi {
@@ -207,7 +202,6 @@ td {
 }
 
 #label {
-    background-color: var(--color-purple-300);
     border-radius: 20px;
     cursor: pointer;
     display: flex;
@@ -217,10 +211,10 @@ td {
     height: 15px;
     width: 30px;
     transform: scale(1.5);
+    background-color: var(--color-purple-300);
 }
 
 #label #ball {
-    background-color: var(--color-light-50);
     border-radius: 50%;
     position: absolute;
     top: 2px;
@@ -229,6 +223,11 @@ td {
     width: 11px;
     transform: translateX(0px);
     transition: transform 0.2s linear;
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    background-color: var(--color-light-50);
+    color: var(--color-purple-500);
 }
 
 .checkbox:checked+#label #ball {
