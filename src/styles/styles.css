@@ -6,10 +6,10 @@
     --color-dark-50: #797984;
     --color-dark-900: #000;
 
-    ---color-purple-100: #e6e1f0;
+    --color-purple-100: #e6e1f0;
     --color-purple-300: #777188;
     --color-purple-500: #403d47;
-    --color-purple-800: #16151C;
+    --color-purple-800: #1b1a22;
 }
 
 * {
@@ -26,15 +26,68 @@ body {
     width: 100%;
     height: 100vh;
     background-color: var(--color-light-50);
+    transition: background 0.2s linear;
+}
+
+body.dark {
+    background-color: var(--color-purple-800);
 }
 
 #container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#table-calculator {
+    display: flex;
     align-items: center;
     gap: 25rem;
-    background-color: var(---color-purple-100);
+    background-color: var(--color-purple-100);
     padding: 4.25rem;
     border-radius: 50px;
+}
+
+#table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#table-bmi {
+    border-collapse: collapse;
+}
+
+#table-bmi th,
+td {
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+    color: var(--color-purple-800);
+}
+
+#table-bmi th {
+    background-color: var(--color-purple-300);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+#table-bmi tr:nth-child(odd) {
+    background-color: var(--color-light-50);
+}
+
+
+#ref-table {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: var(--color-purple-800);
+}
+
+#ref-table a {
+    color: var(--color-purple-500);
 }
 
 #calculator {
@@ -61,7 +114,7 @@ body {
 #title::after {
     position: absolute;
     content: '';
-    background-color: var(---color-purple-100);
+    background-color: var(--color-purple-100);
     width: 8rem;
     height: 3px;
     bottom: 0;
@@ -69,7 +122,7 @@ body {
     border-radius: 3px;
 }
 
-.input-box label{
+.input-box label {
     font-size: 1.1rem;
     color: var(--color-light-50);
     font-weight: 500;
@@ -79,13 +132,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(---color-purple-100);
+    background-color: var(--color-purple-100);
     padding: 0.3rem;
     border-radius: 3px;
     margin-top: 3px;
 }
 
-.input-field span, .input-field i {
+.input-field span,
+.input-field i {
     color: var(--color-purple-500);
     font-size: 1.3rem;
     padding: 0.6rem 1rem;
@@ -100,7 +154,7 @@ body {
     padding: 0, 0.5rem;
 }
 
-.input-field input::-webkit-outer-spin-button,  
+.input-field input::-webkit-outer-spin-button,
 .input-field input::-webkit-inner-spin-button {
     appearance: none;
 }
@@ -113,7 +167,7 @@ body {
     border: none;
     font-size: 1.25rem;
     font-weight: 600;
-    background-color: var(---color-purple-100);
+    background-color: var(--color-purple-100);
     color: var(--color-purple-800);
     padding: 10px;
     border-radius: 3px;
@@ -125,7 +179,7 @@ body {
 }
 
 #result {
-    border-top: 1px solid var(---color-purple-100);
+    border-top: 1px solid var(--color-purple-100);
     padding: 0.75rem 0;
 }
 
@@ -139,6 +193,58 @@ body {
 #bmi span:last-child {
     font-size: 1.1rem;
     color: var(--color-light-50);
+}
+
+#dark-mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+#label {
+    background-color: var(--color-purple-300);
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 15px;
+    width: 30px;
+    transform: scale(1.5);
+}
+
+#label #ball {
+    background-color: var(--color-light-50);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 11px;
+    width: 11px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+#label #ball {
+    transform: translateX(15px);
+}
+
+.checkbox label {
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 15px;
+    width: 30px;
+    transform: scale(1.5);
 }
 
 .hidden {

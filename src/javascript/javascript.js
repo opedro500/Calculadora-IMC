@@ -1,26 +1,21 @@
-/* ============= lógica calculadora ============= */
+/* ============= calculator logic ============= */
 
-let botaoCalcular = document.getElementById('botao_calcular');
+const form = document.getElementById('form');
 
-botaoCalcular.addEventListener("click", (e) => {
+form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const altura = document.getElementById('entrada_altura').value;
-    const peso = document.getElementById('entrada_peso').value;
-    const resultado = calcularIMC(altura, peso);
+    const weight = document.getElementById('weight').value
+    const height = document.getElementById('height').value
+    const bmi = (weight / (height * height)).toFixed(1);
+    const value = document.getElementById('value');
+    
+    value.innerHTML = bmi;
 
-    const paragrafo = document.getElementById('resultado');
-
-    paragrafo.innerHTML = "Resultado: IMC aproximado de " + resultado.toFixed(1);
+    document.getElementById('result').classList.remove('hidden');
 });
 
-function calcularIMC(h, p){
-    const r = p / (h**2);
-
-    return r;
-};
-
-/* ============= modo escuro ============= */
+/* ============= dark mode ============= */
 
 const chk = document.getElementById('chk');
 

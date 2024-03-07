@@ -15,90 +15,99 @@
 <body>
 
     <main id="container">
-        <section id="table">
-            <table id="table-bmi">
-                <tr>
-                    <th>IMC</th>
-                    <th>Classificações</th>
-                </tr>
+        <div id="table-calculator">
+            <section id="table">
+                <table id="table-bmi">
+                    <tr>
+                        <th>IMC</th>
+                        <th>Classificações</th>
+                    </tr>
 
-                <tr>
-                    <td><= 18,5</td>
-                    <td>Abaixo do peso normal</td>
-                </tr>
+                    <tr>
+                        <td>
+                            < 18,5</td>
+                        <td>Abaixo do peso moderado</td>
+                    </tr>
 
-                <tr>
-                    <td>18,5 - 24,9</td>
-                    <td>Peso normal</td>
-                </tr>
+                    <tr>
+                        <td>18,5 - 24,9</td>
+                        <td>Peso moderado</td>
+                    </tr>
 
-                <tr>
-                    <td>25 - 29,9</td>
-                    <td>Excesso de peso</td>
-                </tr>
+                    <tr>
+                        <td>25 - 29,9</td>
+                        <td>Excesso de peso</td>
+                    </tr>
 
-                <tr>
-                    <td>30 - 34,9</td>
-                    <td>Obesidade nível I</td>
-                </tr>
+                    <tr>
+                        <td>30 - 34,9</td>
+                        <td>Obesidade nível I</td>
+                    </tr>
 
-                <tr>
-                    <td>35 - 39,9</td>
-                    <td>Obesidade nível II</td>
-                </tr>
+                    <tr>
+                        <td>35 - 39,9</td>
+                        <td>Obesidade nível II</td>
+                    </tr>
 
-                <tr>
-                    <td>>= 40</td>
-                    <td>Obesidade nível III</td>
-                </tr>
-            </table>
+                    <tr>
+                        <td>> 40</td>
+                        <td>Obesidade nível III</td>
+                    </tr>
+                </table>
 
-            <div class="ref-table">
-                Fonte:
-                <a href="https://endocrinologiacuritiba.com.br/blog/
-                perguntas-frequentes/qual-o-meu-peso-ideal/attachment/attachment-tabela-imc/"
-                    target="_blank" class="ref-table">endocrinologiacuritiba.com.br</a>
-            </div>
-        </section>
+                <div id="ref-table">
+                    Fonte:
+                    <a href="https://endocrinologiacuritiba.com.br/blog/
+                    perguntas-frequentes/qual-o-meu-peso-ideal/attachment/attachment-tabela-imc/"
+                        target="_blank">endocrinologiacuritiba.com.br
+                    </a>
+                </div>
+            </section>
 
-        <section id="calculator">
-            <form id="form">
-                <h1 id="title"> Calculadora - IMC</h1>
+            <section id="calculator">
+                <form id="form">
+                    <h1 id="title"> Calculadora - IMC</h1>
 
-                <div class="input-box">
-                    <label for="weight">Peso em kg</label>
-                    <div class="input-field">
-                        <i class="fa-solid fa-weight-hanging"></i>
-                        <input type="number" id="weight">
-                        <span>Kg</span>
+                    <div class="input-box">
+                        <label for="weight">Peso em kg</label>
+                        <div class="input-field">
+                            <i class="fa-solid fa-weight-hanging"></i>
+                            <input type="number" id="weight" required>
+                            <span>Kg</span>
+                        </div>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="height">Altura em metros</label>
+                        <div class="input-field">
+                            <i class="fa-solid fa-ruler"></i>
+                            <input type="number" step="0.01" id="height" required>
+                            <span>m</span>
+                        </div>
+                    </div>
+
+                    <button id="button" type="submit">Calcular</button>
+                </form>
+
+                <div id="result" class="hidden">
+                    <div id="bmi">
+                        <span id="value"></span>
+                        <span>Seu IMC</span>
                     </div>
                 </div>
+            </section>
+        </div>
 
-                <div class="input-box">
-                    <label for="height">Altura em metros</label>
-                    <div class="input-field">
-                        <i class="fa-solid fa-ruler"></i>
-                        <input type="number" id="height">
-                        <span>m</span>
-                    </div>
-                </div>
-
-                <button id="button" type="submit">Calcular</button>
-            </form>
-
-
-            <div id="result" class="hidden">
-                <div id="bmi">
-                    <span id="value">55</span>
-                    <span>Seu IMC</span>
-                </div>
-            </div>
-        </section>
-
+        <div id="dark-mode">
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label id="label" for="chk">
+                <div id="ball"></div>
+            </label>
+        </div>
     </main>
 
-    <!-- 
-    <script src="src/javascript/javascript.js"></script> -->
+    <script src="src/javascript/javascript.js"></script>
+
 </body>
 
 </html>
